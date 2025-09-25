@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Profil Donatur</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background: #2ecc71;
+      padding: 25px;
+      text-align: center;
+      color: #fff;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+    .main-card {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+    .nama {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .section {
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .section-title {
+      color: #27ae60;
+      margin-top: 0;
+    }
+    .donasi-list {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .catatan {
+      background: #f9f9f9;
+      font-style: italic;
+    }
+    .button-group {
+      margin-top: 25px;
+      text-align: center;
+    }
+    .btn {
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #fff;
+      margin-right: 10px;
+      display: inline-block;
+      font-size: 16px;
+      transition: background 0.2s, transform 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-logout {
+      background: #e74c3c;
+    }
+    .btn-logout:hover {
+      background: #c0392b;
+      transform: scale(1.05);
+    }
+    .btn-edit {
+      background: #3498db;
+      margin-right: 0;
+    }
+    .btn-edit:hover {
+      background: #2980b9;
+      transform: scale(1.05);
+    }
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      margin-top: 20px;
+      color: #7f8c8d;
+      font-size: 12px;
+      border-top: 1px solid #eee;
+    }
+
+    .running-text {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #27ae60;
+      color: #fff;
+      padding: 10px 0;
+      overflow: hidden;
+      font-size: 16px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    .running-text span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: moveText 30s linear infinite;
+    }
+    @keyframes moveText {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    @media (max-width: 800px) {
+      .main-card {
+        max-width: 98vw;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1 style="margin:0;">Profil Donatur</h1>
+    <p style="margin:5px 0;">Terima kasih atas donasi Anda</p>
+  </div>
+
+  <div class="main-card">
+    <h2 class="nama">Roulli Napatupulu</h2>
+
+    <div class="section">
+      <h3 class="section-title">Data Diri</h3>
+      <p><b>Jenis Kelamin:</b> Perempuan</p>
+      <p><b>Umur:</b> 19</p>
+      <p><b>Alamat:</b> Jalan Flamboyan No.44 RT.27 Kel. Karang Anyar Kec. Tarakan Barat</p>
+    </div>
+
+    <div class="section">
+      <h3 class="section-title">Detail Donasi</h3>
+      <p><b>Jenis Donasi:</b> Non-Uang</p>
+      <p><b>Jumlah / Deskripsi:</b></p>
+      <ul class="donasi-list">
+        <li>2 Kg Beras</li>
+        <li>5 Bks Teh Sariwangi</li>
+        <li>5 Kg Gula</li>
+      </ul>
+      <p><b>Metode Pembayaran:</b> Tunai</p>
+    </div>
+
+    <div class="section">
+      <h3 class="section-title">Kontak</h3>
+      <p><b>Email:</b> shinrou97@gmail.com</p>
+      <p><b>Telepon/WA:</b> 0899780057</p>
+    </div>
+
+    <div class="section catatan">
+      <h3 class="section-title">Catatan Tambahan</h3>
+      <p>"Semoga diberi kelancaran, dan dipermudahkan segala urusannya"</p>
+    </div>
+
+    <div class="button-group">
+      <a href="index.html" class="btn btn-logout" id="logoutBtn">Logout</a>
+      <a href="register.html" class="btn btn-edit">Edit Data</a>
+    </div>
+
+    <!-- Teks berjalan -->
+    <div class="running-text">
+      <span id="newsText">
+        Sebanyak 176 relawan telah dikerahkan untuk membantu korban Kebakaran di Jawa Barat dini hari (Sabtu, 12 September 2025).
+        Warga sekitar juga turut serta dalam upaya pemadaman dan evakuasi. - Sebanyak 15 Jiwa meninggal dunia akibat gempa berkekuatan 6,5 SR yang 
+        mengguncang Sulawesi Tengah pada Jumat (11 September 2025) malam.
+        Tim SAR gabungan dari berbagai daerah telah dikerahkan untuk melakukan pencarian dan pertolongan.
+        Tim medis juga siaga di lokasi bencana untuk memberikan perawatan kepada korban yang terluka.
+      </span>
+    </div>
+
+    <div class="footer">
+      © Dimas Elang Satria - 2409106027 <br>
+      Febrian Pratama Saputra - 2409106033
+    </div>
+  </div>
+  <script>
+    // Konfirmasi sebelum logout
+    document.getElementById('logoutBtn').addEventListener('click', function(e) {
+      if(!confirm('Yakin ingin logout?')) {
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>

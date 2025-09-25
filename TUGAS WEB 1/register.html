@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Formulir Donatur</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+    .main-container {
+      width: 60%;
+      max-width: 650px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      position: relative;
+      z-index: 1;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    .desc {
+      text-align: center;
+      color: #7f8c8d;
+      margin-top: 0;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 12px;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    textarea {
+      resize: vertical;
+    }
+    .radio-group label {
+      font-weight: normal;
+      display: inline-block;
+      margin-right: 15px;
+      margin-top: 0;
+    }
+    .button-group {
+      margin-top: 20px;
+      text-align: left;
+    }
+    .btn {
+      padding: 12px 25px;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-right: 5px;
+      font-size: 16px;
+      transition: background 0.2s, transform 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-submit {
+      background: #27ae60;
+    }
+    .btn-submit:hover {
+      background: #219150;
+      transform: scale(1.05);
+    }
+    .btn-reset {
+      background: #e74c3c;
+    }
+    .btn-reset:hover {
+      background: #c0392b;
+      transform: scale(1.05);
+    }
+    .btn-back {
+      background: #3498db;
+      text-decoration: none;
+    }
+    .btn-back:hover {
+      background: #2980b9;
+      transform: scale(1.05);
+    }
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      margin-top: 20px;
+      border-top: 1px solid #eee;
+      color: #7f8c8d;
+      font-size: 12px;
+    }
+    @media (max-width: 700px) {
+      .main-container {
+        width: 95%;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-container">
+    <h1>Formulir Donatur</h1>
+    <p class="desc">Silakan isi data berikut dengan benar</p>
+
+    <form action="thanks.html" method="post" id="donaturForm">
+      <label for="nama">Nama lengkap:</label>
+      <input type="text" name="nama" id="nama" required>
+
+      <label>Jenis Kelamin:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" value="Laki-laki" required> Laki-laki</label>
+        <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+      </div>
+
+      <label for="umur">Umur:</label>
+      <input type="number" name="umur" id="umur" min="0" max="120">
+
+      <label for="alamat">Alamat lengkap:</label>
+      <textarea name="alamat" id="alamat" rows="3"></textarea>
+
+      <label>Jenis donasi:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="jenis_donasi" value="uang" checked> Uang</label>
+        <label><input type="radio" name="jenis_donasi" value="non-uang"> Non-Uang</label>
+      </div>
+
+      <label for="donasi">Jumlah / Deskripsi Donasi:</label>
+      <textarea name="donasi" id="donasi" rows="3"></textarea>
+
+      <label for="metode">Metode pembayaran:</label>
+      <select name="metode" id="metode">
+        <option value="transfer">Transfer Bank</option>
+        <option value="ewallet">E-Wallet</option>
+        <option value="tunai">Tunai</option>
+      </select>
+
+      <label>Preferensi kontak:</label>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="Isi email anda">
+      <label for="telp">Telepon/WA</label>
+      <input type="tel" id="telp" name="telp" required
+            placeholder="08xxxxxxxxxx" 
+            pattern="^08[0-9]{8,11}$"
+            title="Nomor telepon harus diawali 08 dan terdiri dari 10-13 digit">
+
+      <label for="catatan">Catatan tambahan:</label>
+      <textarea name="catatan" id="catatan" rows="3"></textarea>
+
+      <label class="checkbox-label">
+        <input type="checkbox" name="setuju" required> Saya menyetujui data di atas benar
+      </label>
+
+      <div class="button-group">
+        <button type="submit" class="btn btn-submit">Kirim Donasi</button>
+        <button type="reset" class="btn btn-reset">Reset</button>
+        <a href="donasi.html" class="btn btn-back">⬅ Kembali</a>
+      </div>
+
+      <div class="footer">
+        © Dimas Elang Satria - 2409106027 <br>
+        Febrian Pratama Saputra - 2409106033
+      </div>
+    </form>
+  </div>
+</body>
+</html>

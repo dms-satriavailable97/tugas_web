@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Menu Login / Register</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+    .main-container {
+      width: 600px;
+      margin: 150px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+    .desc {
+      color: #7f8c8d;
+      margin-bottom: 40px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-right: 10px;
+      font-size: 16px;
+      transition: background 0.2s, transform 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-login {
+      background: #3498db;
+    }
+    .btn-login:hover, .btn-login:active {
+      background: #2980b9;
+      transform: scale(1.05);
+    }
+    .btn-register {
+      background: #2ecc71;
+      margin-right: 0;
+    }
+    .btn-register:hover, .btn-register:active {
+      background: #27ae60;
+      transform: scale(1.05);
+    }
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      margin-top: 20px;
+      border-top: 1px solid #eee;
+      color: #7f8c8d;
+      font-size: 12px;
+    }
+    @media (max-width: 500px) {
+      .main-container {
+        width: 95vw;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <h1>Website Donasi Online UNMUL</h1>
+    <img src="unmul.png" alt="logo unmul" style="width:250px; margin-bottom: 20px;">
+    <p class="desc">Apabila anda sudah pernah berdonasi disini, silakan login. 
+      Jika belum, silakan berdonasi dengan register.</p>
+
+    <a href="login.html" class="btn btn-login" id="loginBtn">Login</a>
+    <a href="donasi.html" class="btn btn-register" id="registerBtn">Register</a>
+  
+    <div class="footer">
+      © Dimas Elang Satria - 2409106027 <br>
+      Febrian Pratama Saputra - 2409106033
+    </div>
+  </div>
+  <script>
+    // Efek animasi klik tombol
+    document.getElementById('loginBtn').addEventListener('mousedown', function() {
+      this.style.transform = 'scale(0.97)';
+    });
+    document.getElementById('loginBtn').addEventListener('mouseup', function() {
+      this.style.transform = '';
+    });
+    document.getElementById('registerBtn').addEventListener('mousedown', function() {
+      this.style.transform = 'scale(0.97)';
+    });
+    document.getElementById('registerBtn').addEventListener('mouseup', function() {
+      this.style.transform = '';
+    });
+  </script>
+</body>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Terima Kasih</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 100px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .icon-success {
+      width: 100px;
+      height: 100px;
+      background: #2ecc71;
+      border-radius: 50%;
+      margin: 0 auto 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 50px;
+      color: #fff;
+    }
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    .desc {
+      color: #7f8c8d;
+      margin-bottom: 30px;
+    }
+    .btn {
+      padding: 12px 25px;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-right: 10px;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+    .btn-profile {
+      background: #3498db;
+    }
+    .btn-profile:hover {
+      background: #2980b9;
+    }
+    .btn-home {
+      background: #2ecc71;
+      margin-right: 0;
+    }
+    .btn-home:hover {
+      background: #27ae60;
+    }
+    .footer {
+      text-align: center;
+      padding-top: 20px;
+      margin-top: 20px;
+      border-top: 1px solid #eee;
+      color: #7f8c8d;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon-success">
+      ✓
+    </div>
+    <h1>Terima Kasih!</h1>
+    <p class="desc">Donasi Anda telah berhasil dikirim. Semoga kebaikan Anda dibalas dengan kebaikan yang berlipat ganda.</p>
+    <a href="profil.html" class="btn btn-profile">Lihat Profil</a>
+    <a href="index.html" class="btn btn-home">Kembali ke Beranda</a>
+    <div class="footer">
+      © Dimas Elang Satria - 2409106027 <br>
+      Febrian Pratama Saputra - 2409106033
+    </div>
+  </div>
+</body>
+
+<script>
+  // Animasi ikon centang
+  const icon = document.querySelector('.icon-success');
+  let scale = 1;
+  let growing = true;
+
+  setInterval(() => {
+    if (growing) {
+      scale += 0.01;
+      if (scale >= 1.2) growing = false;
+    } else {
+      scale -= 0.01;
+      if (scale <= 1) growing = true;
+    }
+    icon.style.transform = `scale(${scale})`;
+  }, 30);
+</script>
+</body>
+</html>
