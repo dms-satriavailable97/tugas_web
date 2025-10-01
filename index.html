@@ -1,16 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Daftar Proyek</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Proyek Web</title>
+  <style>
+    /* Reset dan variabel CSS */
+    :root {
+      --primary-color: #4361ee;
+      --secondary-color: #3a0ca3;
+      --accent-color: #4cc9f0;
+      --light-color: #f8f9fa;
+      --dark-color: #212529;
+      --success-color: #4bb543;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      color: var(--dark-color);
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    /* Container utama */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 30px 0;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      color: var(--secondary-color);
+      margin-bottom: 10px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--accent-color);
+      border-radius: 2px;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* Grid proyek */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    
+    .project-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      position: relative;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    }
+    
+    .project-content {
+      padding: 25px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .project-title {
+      font-size: 1.4rem;
+      color: var(--secondary-color);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .project-title i {
+      margin-right: 10px;
+      color: var(--primary-color);
+    }
+    
+    .project-description {
+      color: #666;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    
+    .project-link {
+      display: inline-block;
+      background: var(--primary-color);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      text-align: center;
+      margin-top: auto;
+    }
+    
+    .project-link:hover {
+      background: var(--secondary-color);
+      transform: scale(1.05);
+    }
+    
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    
+    /* Responsif */
+    @media (max-width: 768px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Selamat Datang</h1>
-  <p>Silakan pilih posttest:</p>
-  <ul>
-    <li><a href="TUGAS WEB 1/index.html">TUGAS WEB 1</a></li>
-    <li><a href="TUGAS WEB 2/index.html">TUGAS WEB 2</a></li>
-    <li><a href="tes/index.html">TES</a></li>
-  </ul>
+  <div class="container">
+    <header>
+      <h1>Matakuliah Pemrogaman WEB</h1>
+      <p class="subtitle">Kumpulan tugas dan proyek matkul Pemrogaman Web yang telah saya kerjakan. Klik pada proyek untuk melihat detailnya.</p>
+    </header>
+    
+    <main>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-content">
+            <h2 class="project-title">
+              <i class="fas fa-file-code"></i> Tugas Web 1
+            </h2>
+            <p class="project-description">
+              Tugas website yang berisikan formulir, dengan fitur login serta register sederhana menggunakan HTML, CSS, dan JavaScript.
+            </p>
+            <a href="TUGAS WEB 1/index.html" class="project-link">Lihat Proyek</a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-content">
+            <h2 class="project-title">
+              <i class="fas fa-laptop-code"></i> Tugas UTS Web
+            </h2>
+            <p class="project-description">
+              Ujian Tengah Semester (UTS) mata kuliah pemrograman web. membuat website Portofolio pribadi.
+            </p>
+            <a href="UTS WEB/index.html" class="project-link">Lihat Proyek</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <p>Dimas Elang Satria - INFORMATIKA A 2024.</p>
+    </footer>
+  </div>
 </body>
 </html>
